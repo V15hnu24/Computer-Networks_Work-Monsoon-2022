@@ -59,6 +59,14 @@ NS_LOG_COMPONENT_DEFINE ("TcpExample");
 // install in the source node.
 // ===========================================================================
 //
+
+std::string tcp_variant = "TcpCubic";
+std::string bandwidth = "5Mbps";
+std::string delay = "5ms";
+std::string queuesize = "10p";
+double error_rate = 0.000001;
+int simulation_time = 10; //seconds
+
 class MyApp : public Application
 {
 public:
