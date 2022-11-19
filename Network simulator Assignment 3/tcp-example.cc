@@ -25,6 +25,9 @@ using namespace ns3;
 
 NS_LOG_COMPONENT_DEFINE ("TcpExample");
 
+
+
+
 // ===========================================================================
 //
 //         node 0                 node 1
@@ -60,12 +63,16 @@ NS_LOG_COMPONENT_DEFINE ("TcpExample");
 // ===========================================================================
 //
 
+<<<<<<< HEAD
 std::string tcp_variant = "TcpCubic";
 std::string bandwidth = "5Mbps";
 std::string delay = "5ms";
 std::string queuesize = "10p";
 double error_rate = 0.000001;
 int simulation_time = 10; //seconds
+=======
+
+>>>>>>> 22fd61e9a338160a76f5efebb242edd98ba665fc
 
 class MyApp : public Application
 {
@@ -179,13 +186,17 @@ main (int argc, char *argv[])
 {
 
   //change these parameters for different simulations
-  std::string tcp_variant = "TcpCubic";
-  std::string bandwidth = "5Mbps";
-  std::string delay = "5ms";
-  std::string queuesize = "10p";
+  std::string tcp_variant = "TcpNewReno";
+  std::string bandwidth = "7Mbps";
+  std::string delay = "110ms";
+  std::string queuesize = "50p";
   double error_rate = 0.000001;
   
   int simulation_time = 10; //seconds
+
+  Config::SetDefault("ns3::TcpSocket::SndBufSize", UintegerValue(14600000)); 
+  Config::SetDefault("ns3::TcpSocket::RcvBufSize", UintegerValue(14600000));
+
 
   // Select TCP variant
   if (tcp_variant.compare("TcpCubic") == 0)

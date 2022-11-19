@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-file = open("tcp-example.tr", "r")
+file = open("C:\\Users\\799vi\\Desktop\\Courses\\Computer networks\\Network simulator Assignment 3\\Q1\\tcp-example.tr", "r")
 
 data = file.readlines()
 
@@ -15,7 +15,7 @@ packets_t = 0
 temp = 0
 
 for i in data:
-    j = i.split().split()
+    j = i.split()
 
     sequence = int(j[36][4:])
     time = float(j[1])
@@ -41,7 +41,7 @@ for i in data:
 X = np.array(x)
 Y = np.array(y)
 
-plt.plot(X, Y)
+plt.plot(X, Y,"g")
 plt.xlabel("Time")
 plt.ylabel("Queuing Delay")
 plt.title("Queuing Delay vs Time")
