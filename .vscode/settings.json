@@ -1,0 +1,7 @@
+{
+    "C_Cpp.errorSquiggles": "Enabled",
+    "markdown.experimental.validate.enabled": false,
+    "files.associations": {
+        "stdio.h": "c"
+    }
+}
